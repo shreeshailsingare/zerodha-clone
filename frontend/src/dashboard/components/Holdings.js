@@ -9,7 +9,7 @@ const Holdings = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get(`${process.env.REACT_APP_API_URL}/allHoldings`, {
         headers: { Authorization: token },
       })
       .then((res) => {

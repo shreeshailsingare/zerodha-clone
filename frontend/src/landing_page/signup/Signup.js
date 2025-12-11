@@ -19,7 +19,7 @@ export default function Signup() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3002/signup", form);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, form);
 
       if (res.data.success) {
         alert("Signup successful! Please log in.");
